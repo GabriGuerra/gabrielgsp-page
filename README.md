@@ -1,4 +1,36 @@
 
+# About this page
+
+This is an interactive resume developed with modern technology and best design pattern practices. It presents my resume information in sections such as personal data, skills, projects, academic background, and more.
+
+## Main Technologies
+
+The main technologies used were:
+- **React** for building the interface.
+- **Vite** for project building.
+- **Tailwind CSS** for responsive styling.
+- **Framer Motion** for section transitions and animations.
+- **Git** for version control.
+- **Vercel** for deployment.
+
+## Structure and Code Standards
+
+The code is organized into reusable components, where each section of the page is handled independently. State management is done through **React Hooks**.
+
+## Features
+
+- Toggle between **Portuguese and English** languages.
+- Responsive design for different screen sizes.
+- Each section of the resume is an **independent component**.
+- State is managed using **React Hooks**.
+- The **BackgroundCV** component is managed separately with **Framer Motion** and **Tailwind CSS 4**.
+
+## Code Overview
+
+The code consists of components such as **ProfileMain, ProfileInfo, SkillsSection**, among others, which are dynamically loaded. The application state is controlled using hooks like **useState** and **useEffect**.
+
+---
+
 # Sobre esta página
 
 Este é um currículo interativo, desenvolvido com tecnologia moderna e boas práticas de padrões de design. Ele apresenta as informações do meu currículo em seções, como dados pessoais, habilidades, projetos, formação acadêmica, entre outros.
@@ -29,36 +61,6 @@ O código foi organizado em componentes reutilizáveis, onde cada seção da pá
 
 O código é composto por componentes como **ProfileMain, ProfileInfo, SkillsSection**, entre outros, que são carregados dinamicamente. O estado da aplicação é controlado através de hooks como **useState** e **useEffect**.
 
----
 
-# About this page
-
-This is an interactive resume developed with modern technology and best design pattern practices. It presents my resume information in sections such as personal data, skills, projects, academic background, and more.
-
-## Main Technologies
-
-The main technologies used were:
-- **React** for building the interface.
-- **Vite** for project building.
-- **Tailwind CSS** for responsive styling.
-- **Framer Motion** for section transitions and animations.
-- **Git** for version control.
-- **Vercel** for deployment.
-
-## Structure and Code Standards
-
-The code is organized into reusable components, where each section of the page is handled independently. State management is done through **React Hooks**.
-
-## Features
-
-- Toggle between **Portuguese and English** languages.
-- Responsive design for different screen sizes.
-- Each section of the resume is an **independent component**.
-- State is managed using **React Hooks**.
-- The **BackgroundCV** component is managed separately with **Framer Motion** and **Tailwind CSS 4**.
-
-## Code Overview
-
-The code consists of components such as **ProfileMain, ProfileInfo, SkillsSection**, among others, which are dynamically loaded. The application state is controlled using hooks like **useState** and **useEffect**.
 
 
