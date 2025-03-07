@@ -24,13 +24,13 @@ function App() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="flex flex-col p-4 sm:p-8 min-h-screen relative"
+      className="flex flex-col min-h-screen relative flex-grow"
     >
       <BackgroundCV />
 
       {!showAbout ? (
-        <div className="flex flex-col lg:flex-row w-full gap-6 lg:gap-8">
-          <div className="flex-1 lg:flex-2 flex flex-col gap-6">
+        <div className="flex flex-col lg:flex-row w-full gap-0 flex-grow"> {/* Removendo gap aqui */}
+          <div className="flex-1 lg:flex-2 flex flex-col gap-0 flex-grow"> {/* Removendo gap aqui */}
             <section className="p-4 sm:p-6">
               <ProfileMain language={language} toggleLanguage={toggleLanguage} setShowAbout={setShowAbout} />
             </section>
@@ -42,11 +42,11 @@ function App() {
             </section>
           </div>
 
-          <div className="flex-1 lg:flex-2 flex flex-col gap-6">
+          <div className="flex-1 lg:flex-2 flex flex-col gap-0 flex-grow"> {/* Removendo gap aqui */}
             <motion.section
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 2, duration: 1 }}
+              transition={{ delay: 2, duration: 0.2 }}
               className="p-4 sm:p-6"
             >
               <ProfileInfo language={language} />
@@ -54,7 +54,7 @@ function App() {
             <motion.section
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 2.5, duration: 1 }}
+              transition={{ delay: 2.5, duration: 0.2 }}
               className="p-4 sm:p-6"
             >
               <EducationSection language={language} />
@@ -62,7 +62,7 @@ function App() {
             <motion.section
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 3, duration: 1 }}
+              transition={{ delay: 3, duration: .2 }}
               className="p-4 sm:p-6"
             >
               <LanguagesSection language={language} />
@@ -70,7 +70,7 @@ function App() {
             <motion.section
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 3.5, duration: 1 }}
+              transition={{ delay: 3.5, duration: .2 }}
               className="p-4 sm:p-6"
             >
               <RegionSection language={language} />
@@ -78,7 +78,7 @@ function App() {
             <motion.section
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 4, duration: 1 }}
+              transition={{ delay: 4, duration: .2 }}
               className="p-4 sm:p-6"
             >
               <AdditionalInfoSection language={language} />
@@ -100,11 +100,11 @@ function App() {
           <p className="mb-4 text-left">
             {language === 'pt' ? 
               'Esta página é um currículo interativo, desenvolvido com tecnologia moderna e boas práticas de padrões de design. Dispõe as informações do meu currículo em seções, como dados pessoais, habilidades, projetos, formação acadêmica, etc.' :
-              'This page is an interactive resume, built using modern technology and good design patterns practice. It disposes the information of my resume in sections, such as personal data, skills, projects, education, etc.'
+              'This page is an interactive resume, built using modern technology and good design patterns practice. It disposes the information of my resume in sections, such as personal data, skills, projects, education, etc.' 
             }
           </p>
-          
-          <h3 className="text-xl font-semibold text-teal-400 mb-4 text-left">{language === 'pt' ? 'Principains tecnologias ' : ' Main Technologies Used'}</h3>
+
+          <h3 className="text-xl font-semibold text-teal-400 mb-4 text-left">{language === 'pt' ? 'Principais tecnologias' : 'Main Technologies Used'}</h3>
           <p className="mb-4 text-left">
             {language === 'pt' ? 
               'As principais tecnologias utilizadas foram React para a construção da interface, Vite para o build do projeto, Tailwind CSS para a estilização responsiva, Framer Motion para as transições de seção e animações, Git para controle de versão e Vercel para deploy.' :
@@ -128,7 +128,7 @@ function App() {
             <li>{language === 'pt' ? 'O estado é gerido usando React Hooks.' : 'State is managed using React Hooks.'}</li>
             <li>{language === 'pt' ? 'Componente BackgroundCV gerido separadamente com framer-motion e tailwindCSS 4.' : 'BackgroundCV component managed separately with Framer Motion and TailwindCSS 4.'}</li>
           </ul>
-          <br></br>
+          <br />
 
           <h3 className="text-xl font-semibold text-teal-400 mb-4 text-left">{language === 'pt' ? 'Visão Geral do Código' : 'Code Overview'}</h3>
           <p className="mb-4 text-left">

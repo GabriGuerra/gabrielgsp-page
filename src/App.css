@@ -1,5 +1,21 @@
-@import "tailwindcss";
-/* src/index.css ou outro arquivo CSS */
-/* Animação de Gradiente */
-/* App.css */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Clash+Grotesk:wght@400;500;600&family=Bebas+Neue&display=swap');
+@import 'tailwindcss';
+
+
+/* Corpo */
+body {
+  font-family: 'Clash Grotesk';
+}
+
+/* Títulos */
+h1, h2, h3, .font-heading {
+  font-family: 'Space Grotesk';
+}
+
+/* Título Principal */
+h1 {
+  font-family: 'Clash Grotesk';
+}
 
