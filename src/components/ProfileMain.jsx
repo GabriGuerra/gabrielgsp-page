@@ -44,10 +44,10 @@ export default function ProfileMain({ language, toggleLanguage, setShowAbout }) 
 
 
 
-        <p className="text-xl text-gray-400 mb-6">Software Development & Data Science</p>
+        <h2 className="text-xl text-gray-400 mb-6">Software Development | Data Science</h2>
 
-        <div className="space-y-3 text-gray-400 mt-6">
-          <p className="flex items-center justify-center md:justify-start text-sm">
+        <div className="space-y-3 w-full md text-gray-400 mt-1 px-0">
+        <p className="flex items-center justify-center md:justify-start text-md w-[500px]">
             <FaMapMarkerAlt className="mr-2 text-teal-500" />
             Rua Senador Xavier da Silva, nº 80, São Francisco – Curitiba, PR
           </p>
