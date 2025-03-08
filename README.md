@@ -1,7 +1,7 @@
 
 # About this page
 
-This is an interactive resume developed with modern technology and best design pattern practices. It presents my resume information in sections such as personal data, skills, projects, academic background, and more.
+This is an interactive resume developed with modern technology and good design pattern practices. It presents my resume information in sections such as personal data, skills, projects, academic background, and more.
 
 ## Main Technologies
 
