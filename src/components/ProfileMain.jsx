@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { FaLinkedin, FaGithub, FaMapMarkerAlt, FaPhone, FaEnvelope, FaFilePdf } from 'react-icons/fa';
 import { GiWorld } from 'react-icons/gi';
-import { FaRunning } from 'react-icons/fa';  // Ícone do Strava (usando FaRunning)
+import { FaRunning } from 'react-icons/fa'; 
 
 export default function ProfileMain({ language, toggleLanguage, setShowAbout }) {
   return (

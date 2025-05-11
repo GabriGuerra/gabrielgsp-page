@@ -10,15 +10,15 @@ export default function EducationSection({ language }) {
   const educationText = {
     pt: {
       title: "Educação",
-      postGrad: "Pos-graduação: Ciência de Dados – Universidade Tecnológica Federal do Paraná (UTFPR), conclusão em 12/2026",
-      graduation: "Graduação: Análise e Desenvolvimento de Sistemas – Universidade Federal do Paraná (UFPR), concluído em 08/2022",
-      highSchool: "Ensino Médio: Colégio Marista - Notre Dame, concluído em 12/2012"
+      postGrad: "Pos-graduação<br />*Ciência de Dados* – UTFPR<br />conclusão em 12/2026",
+      graduation: "Graduação<br />*Análise e Desenvolvimento de Sistemas - UFPR<br />concluído em 08/2022",
+      highSchool: "Ensino Médio<br />*Colégio Marista - Notre Dame*<br />concluído em 12/2012"
     },
     en: {
       title: "Education",
-      postGrad: "Postgraduate: Applied Artificial Intelligence – Universidade Tecnológica Federal do Paraná (UTFPR), completion in 12/2026",
-      graduation: "Undergraduate: Systems Analysis and Development – Universidade Federal do Paraná (UFPR), completed in 08/2022",
-      highSchool: "High School: Marista – Notre Dame School, completed in 12/2012"
+      postGrad: "Postgraduate<br />*Data Science* – UTFPR<br />completion in 12/2026",
+      graduation: "Undergraduate<br />*System Development* – UFPR<br />completed in 08/2022",
+      highSchool: "High School<br />*Marista – Notre Dame School*<br />completed in 12/2012"
     }
   };
 

@@ -10,17 +10,11 @@ export default function AdditionalInfoSection({ language }) {
   const additionalInfoText = {
     pt: {
       title: "Informações Complementares",
-      description: `Atualmente desenvolvendo projetos com tecnologias modernas e próximo da conclusão do curso de Full-Stack Developer pela IBM.
-                    Profissional proativo, organizado e sociável, tanto no ambiente de trabalho quanto fora dele.
-                    Corredor de rua, busca levar uma vida equilibrada, com foco na saúde e no bem-estar.
-                    Rotina sempre voltada para aprendizado contínuo, tem como principais hobbies atividade física, estudo de novos idiomas e tecnologias.`
+      description: `Proativo, organizado e sociável, com grande apreço por trabalhar em equipe. Em sua vida pessoal, prioriza um estilo de vida saudável e equilibrado, tendo como principais hobbies corrida, ciclismo e violão.`
     },
     en: {
       title: "Additional Information",
-      description: `Currently developing projects with modern technologies and close to completing the Full-Stack Developer course by IBM.
-                    Proactive, organized, and sociable professional, both in the workplace and outside of it.
-                    Street runner, seeking to live a balanced life, focusing on health and well-being.
-                    Passionate about continuous learning, with main hobbies being the study of new languages and technologies.`
+      description: `Proactive, organized, and sociable, with a strong appreciation for teamwork. In his personal life, he prioritizes a healthy and balanced lifestyle, with running, cycling, and playing the guitar as his main hobbies.`
     }
   };
 

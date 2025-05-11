@@ -10,13 +10,13 @@ export default function LanguagesSection({ language }) {
   const languagesText = {
     pt: {
       title: "Idiomas",
-      french: "Francês: Leitura avançada, escrita avançada, conversação avançada",
-      english: "Inglês: Leitura fluente, escrita fluente, conversação fluente"
+      french: "Francês<br /> Leitura avançada, escrita avançada, conversação avançada",
+      english: "Inglês<br /> Leitura fluente, escrita fluente, conversação fluente"
     },
     en: {
       title: "Languages",
-      french: "French: Advanced reading, advanced writing, advanced speaking",
-      english: "English: Fluent reading, fluent writing, fluent speaking"
+      french: "French<br /> Advanced reading, advanced writing, advanced speaking",
+      english: "English<br /> Fluent reading, fluent writing, fluent speaking"
     }
   };
 
