@@ -1,53 +1,53 @@
 import { useState, useEffect } from "react";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io"; // Usando react-icons para as setas
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io"; // Ícones de seta
 
 export default function LanguagesSection({ language }) {
   // Estado para controlar a visibilidade da descrição
   const [isExpanded, setIsExpanded] = useState(false);
-  const [isClosing, setIsClosing] = useState(false); // Estado para controlar quando o texto está fechando
+  const [isClosing, setIsClosing] = useState(false);
 
-  // Definindo os textos para ambos os idiomas
+  // Definindo os textos com estrutura refinada
   const languagesText = {
     pt: {
       title: "Idiomas",
-      french: "Francês<br /> Leitura avançada, escrita avançada, conversação avançada",
-      english: "Inglês<br /> Leitura fluente, escrita fluente, conversação fluente"
+      french: { label: "Francês", skills: ["Leitura avançada", "Escrita avançada", "Conversação avançada"] },
+      english: { label: "Inglês", skills: ["Leitura fluente", "Escrita fluente", "Conversação fluente"] }
     },
     en: {
       title: "Languages",
-      french: "French<br /> Advanced reading, advanced writing, advanced speaking",
-      english: "English<br /> Fluent reading, fluent writing, fluent speaking"
+      french: { label: "French", skills: ["Advanced reading", "Advanced writing", "Advanced speaking"] },
+      english: { label: "English", skills: ["Fluent reading", "Fluent writing", "Fluent speaking"] }
     }
   };
 
-  // Função para alternar o estado de expansão
+  // Alterna estado de expansão
   const toggleExpand = () => {
-    setIsClosing(true); // Marca como fechando
+    setIsClosing(true);
     setIsExpanded(!isExpanded);
   };
 
-  // UseEffect para abrir automaticamente a seção após a montagem inicial
+  // Expande automaticamente após a montagem inicial
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsExpanded(true); // Define o estado como "expandido" após a montagem inicial
-    }, 4900); // Simula o tempo de clique após a renderização
+      setIsExpanded(true);
+    }, 4900);
 
-    return () => clearTimeout(timer); // Limpa o timer caso o componente seja desmontado antes do tempo
-  }, []); // O array vazio faz com que o efeito aconteça apenas na primeira renderização
+    return () => clearTimeout(timer);
+  }, []);
 
-  // UseEffect para alterar a cor da linha e da seta após a animação de fechamento
+  // Altera cor após o fechamento
   useEffect(() => {
     if (!isExpanded) {
       const timer = setTimeout(() => {
-        setIsClosing(false); // Permite que a linha e a seta mudem de cor após a animação de fechamento
-      }, 500); // A duração do efeito de fechamento (500ms para o fade)
+        setIsClosing(false);
+      }, 500);
       return () => clearTimeout(timer);
     }
-  }, [isExpanded]); // Esse efeito só é disparado quando isExpanded mudar
+  }, [isExpanded]);
 
   return (
     <div className="max-w-3xl mx-auto px-6">
-      {/* Título com efeito de underline e flecha */}
+      {/* Título com efeito visual */}
       <h2
         className={`text-4xl font-bold relative tracking-tight pb-2 cursor-pointer flex items-center justify-between transition-all duration-300 ease-in-out border-b-2 ${
           isExpanded
@@ -56,7 +56,7 @@ export default function LanguagesSection({ language }) {
             ? "text-teal-700 border-teal-600"
             : "text-teal-700 border-teal-700"
         }`}
-        onClick={toggleExpand} // Ativa a expansão ao clicar
+        onClick={toggleExpand}
       >
         {languagesText[language].title}
         <span
@@ -64,23 +64,31 @@ export default function LanguagesSection({ language }) {
             isExpanded ? "text-teal-400" : isClosing ? "text-teal-700" : "text-teal-700"
           }`}
         >
-          {isExpanded ? <IoIosArrowUp /> : <IoIosArrowDown />} {/* Muda a flecha */}
+          {isExpanded ? <IoIosArrowUp /> : <IoIosArrowDown />}
         </span>
       </h2>
 
-      {/* Descrição dos idiomas com animação suave de rolar para baixo */}
+      {/* Descrição com animação */}
       <div
         className={`overflow-hidden transition-all duration-1000 ease-in-out ${
           isExpanded ? "max-h-screen" : "max-h-0"
         }`}
       >
-        <div className="space-y-2 text-gray-400 mt-4">
-          <p className="text-lg">
-            <strong className="text-teal-500">{languagesText[language].french.split(":")[0]}:</strong> {languagesText[language].french.split(":")[1]}
-          </p>
-          <p className="text-lg">
-            <strong className="text-teal-500">{languagesText[language].english.split(":")[0]}:</strong> {languagesText[language].english.split(":")[1]}
-          </p>
+        <div className="space-y-6 text-gray-400 mt-4">
+          {["french", "english"].map((key) => (
+            <p key={key} className="text-lg">
+              <strong className="text-teal-500 text-xl">
+                {languagesText[language][key].label}
+              </strong>
+              <br />
+              {languagesText[language][key].skills.map((skill, index) => (
+                <span key={index}>
+                  {skill}
+                  {index < languagesText[language][key].skills.length - 1 && ", "}
+                </span>
+              ))}
+            </p>
+          ))}
         </div>
       </div>
     </div>

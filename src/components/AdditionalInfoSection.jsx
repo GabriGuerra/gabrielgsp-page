@@ -10,11 +10,13 @@ export default function AdditionalInfoSection({ language }) {
   const additionalInfoText = {
     pt: {
       title: "Informações Complementares",
-      description: `Proativo, organizado e sociável, com grande apreço por trabalhar em equipe. Em sua vida pessoal, prioriza um estilo de vida saudável e equilibrado, tendo como principais hobbies corrida, ciclismo e violão.`
+      description: "Proativo, organizado e sociável, com grande apreço pelo trabalho em equipe. "
+        + "Em sua vida pessoal, prioriza um estilo de vida saudável e equilibrado, tendo como principais hobbies a corrida, o ciclismo e o violão."
     },
     en: {
       title: "Additional Information",
-      description: `Proactive, organized, and sociable, with a strong appreciation for teamwork. In his personal life, he prioritizes a healthy and balanced lifestyle, with running, cycling, and playing the guitar as his main hobbies.`
+      description: "Proactive, organized, and sociable, with a strong appreciation for teamwork. "
+        + "In his personal life, he prioritizes a healthy and balanced lifestyle, with running, cycling, and playing the guitar as his main hobbies."
     }
   };
 

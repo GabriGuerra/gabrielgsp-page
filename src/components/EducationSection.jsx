@@ -1,55 +1,55 @@
 import { useState, useEffect } from "react";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io"; // Usando react-icons para as setas
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io"; // Ícones de seta
 
 export default function EducationSection({ language }) {
   // Estado para controlar a visibilidade da descrição
   const [isExpanded, setIsExpanded] = useState(false);
-  const [isClosing, setIsClosing] = useState(false); // Estado para controlar quando o texto está fechando
+  const [isClosing, setIsClosing] = useState(false);
 
-  // Definindo os textos para ambos os idiomas
+  // Textos com estrutura refinada
   const educationText = {
     pt: {
       title: "Educação",
-      postGrad: "Pos-graduação<br />*Ciência de Dados* – UTFPR<br />conclusão em 12/2026",
-      graduation: "Graduação<br />*Análise e Desenvolvimento de Sistemas - UFPR<br />concluído em 08/2022",
-      highSchool: "Ensino Médio<br />*Colégio Marista - Notre Dame*<br />concluído em 12/2012"
+      postGrad: { label: "Pós-graduação", course: "Ciência de Dados", institution: "Universidade Tecnológica Federal do Paraná (UTFPR)", completion: "Conclusão em 12/2026" },
+      graduation: { label: "Graduação", course: "Análise e Desenvolvimento de Sistemas", institution: "Universidade Federal do Paraná (UFPR)", completion: "Concluído em 08/2022" },
+      highSchool: { label: "Ensino Médio", course: "Colégio Marista - Notre Dame", institution: "Concluído em 12/2012" }
     },
     en: {
       title: "Education",
-      postGrad: "Postgraduate<br />*Data Science* – UTFPR<br />completion in 12/2026",
-      graduation: "Undergraduate<br />*System Development* – UFPR<br />completed in 08/2022",
-      highSchool: "High School<br />*Marista – Notre Dame School*<br />completed in 12/2012"
+      postGrad: { label: "Postgraduate", course: "Applied Artificial Intelligence", institution: "Universidade Tecnológica Federal do Paraná (UTFPR)", completion: "Completion in 12/2026" },
+      graduation: { label: "Undergraduate", course: "Systems Analysis and Development", institution: "Universidade Federal do Paraná (UFPR)", completion: "Completed in 08/2022" },
+      highSchool: { label: "High School", course: "Marista – Notre Dame School", institution: "Completed in 12/2012" }
     }
   };
 
-  // Função para alternar o estado de expansão
+  // Alterna estado de expansão
   const toggleExpand = () => {
-    setIsClosing(true); // Marca como fechando
+    setIsClosing(true);
     setIsExpanded(!isExpanded);
   };
 
-  // UseEffect para abrir automaticamente a seção após a montagem inicial
+  // Expande automaticamente após a montagem inicial
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsExpanded(true); // Define o estado como "expandido" após a montagem inicial
-    }, 4700); // Simula o tempo de clique após a renderização
+      setIsExpanded(true);
+    }, 4700);
 
-    return () => clearTimeout(timer); // Limpa o timer caso o componente seja desmontado antes do tempo
-  }, []); // O array vazio faz com que o efeito aconteça apenas na primeira renderização
+    return () => clearTimeout(timer);
+  }, []);
 
-  // UseEffect para alterar a cor da linha e da seta após a animação de fechamento
+  // Altera cor após o fechamento
   useEffect(() => {
     if (!isExpanded) {
       const timer = setTimeout(() => {
-        setIsClosing(false); // Permite que a linha e a seta mudem de cor após a animação de fechamento
-      }, 500); // A duração do efeito de fechamento (500ms para o fade)
+        setIsClosing(false);
+      }, 500);
       return () => clearTimeout(timer);
     }
-  }, [isExpanded]); // Esse efeito só é disparado quando isExpanded mudar
+  }, [isExpanded]);
 
   return (
-    <div className="max-w-3xl mx-auto px-6"> {/* Removendo margem vertical extra */}
-      {/* Título com efeito de underline e flecha */}
+    <div className="max-w-3xl mx-auto px-6">
+      {/* Título com efeito visual */}
       <h2
         className={`text-4xl font-bold relative tracking-tight pb-2 cursor-pointer flex items-center justify-between transition-all duration-300 ease-in-out border-b-2 ${
           isExpanded
@@ -58,7 +58,7 @@ export default function EducationSection({ language }) {
             ? "text-teal-700 border-teal-600"
             : "text-teal-700 border-teal-700"
         }`}
-        onClick={toggleExpand} // Ativa a expansão ao clicar
+        onClick={toggleExpand}
       >
         {educationText[language].title}
         <span
@@ -66,26 +66,34 @@ export default function EducationSection({ language }) {
             isExpanded ? "text-teal-400" : isClosing ? "text-teal-700" : "text-teal-700"
           }`}
         >
-          {isExpanded ? <IoIosArrowUp /> : <IoIosArrowDown />} {/* Muda a flecha */}
+          {isExpanded ? <IoIosArrowUp /> : <IoIosArrowDown />}
         </span>
       </h2>
 
-      {/* Descrição da educação com animação suave de rolar para baixo */}
+      {/* Descrição com animação */}
       <div
         className={`overflow-hidden transition-all duration-1000 ease-in-out ${
           isExpanded ? "max-h-screen" : "max-h-0"
         }`}
       >
-        <div className="space-y-4 text-gray-400 mt-4">
-          <p className="text-lg">
-            <strong className="text-teal-500">{educationText[language].postGrad.split(":")[0]}:</strong> {educationText[language].postGrad.split(":")[1]}
-          </p>
-          <p className="text-lg">
-            <strong className="text-teal-500">{educationText[language].graduation.split(":")[0]}:</strong> {educationText[language].graduation.split(":")[1]}
-          </p>
-          <p className="text-lg">
-            <strong className="text-teal-500">{educationText[language].highSchool.split(":")[0]}:</strong> {educationText[language].highSchool.split(":")[1]}
-          </p>
+        <div className="space-y-6 text-gray-400 mt-4">
+          {["postGrad", "graduation", "highSchool"].map((key) => (
+            <p key={key} className="text-lg">
+              <strong className="text-teal-500 text-xl">{educationText[language][key].label}</strong>
+              <br />
+              <span className="italic">{educationText[language][key].course}</span>
+              <br />
+              {key !== "highSchool" ? (
+                <>
+                  <span className="text-gray-400">{educationText[language][key].institution}</span>
+                  <br />
+                  <span className="text-gray-400">{educationText[language][key].completion}</span>
+                </>
+              ) : (
+                <span className="text-gray-400">{educationText[language][key].institution}</span>
+              )}
+            </p>
+          ))}
         </div>
       </div>
     </div>

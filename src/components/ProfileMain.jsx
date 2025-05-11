@@ -64,7 +64,7 @@ export default function ProfileMain({ language, toggleLanguage, setShowAbout }) 
           <p className="flex items-center justify-center md:justify-start text-sm">
             <FaFilePdf className="mr-2 text-teal-500" />
             <a
-              href="/cv-gabrielguerra.pdf"
+              href="/CV_GabrielGuerra.pdf"
               className="text-teal-500 hover:text-teal-600 transition duration-300"
               download
             >

@@ -11,12 +11,18 @@ export default function ProfileInfo({ language }) {
     pt: {
       title: "Perfil Profissional",
       description:
-        "Formado em Análise e Desenvolvimento de Sistemas pela Universidade Federal do Paraná (UFPR), possui conhecimento avançado, principalmente, em JavaScript, Python e SQL, incluindo seus principais frameworks. Tem familiaridade com projetos desenvolvidos com metodologias ágeis, especialmente SCRUM, e possui bom entendimento da arquitetura MVC e do desenvolvimento de APIs RESTful.<br /> Domina sistemas de gerenciamento de bancos de dados relacionais, como MySQL, PostgreSQL e Oracle DB e sólida experiência acadêmica em Data Science, utilizando Excel, Pandas, MongoDB, Spark, NumPy, Matplotlib e outras tecnologias. É fluente e formado em Inglês e Francês e, atualmente, cursa Ciência de Dados na Universidade Tecnológica Federal do Paraná (UTFPR), aprofundando seu interesse na área."
+        "Formado em Análise e Desenvolvimento de Sistemas pela Universidade Federal do Paraná (UFPR), possui conhecimento avançado, principalmente, em JavaScript, Python e SQL, incluindo seus principais frameworks. "
+        + "Tem experiência com projetos desenvolvidos utilizando metodologias ágeis, especialmente SCRUM, e possui sólido entendimento da arquitetura MVC e do desenvolvimento de APIs RESTful. "
+        + "Domina sistemas de gerenciamento de bancos de dados relacionais, como MySQL, PostgreSQL e Oracle DB, além de ter forte experiência acadêmica em Data Science, utilizando Excel, Pandas, MongoDB, Spark, NumPy, Matplotlib e outras tecnologias. "
+        + "Fluente e certificado em Inglês e Francês, atualmente cursa Ciência de Dados na Universidade Tecnológica Federal do Paraná (UTFPR), ampliando seu conhecimento e interesse na área."
     },
     en: {
       title: "Professional Profile",
       description:
-        "Graduated in Systems Analysis and Development from the Federal University of Paraná (UFPR), with advanced knowledge primarily in JavaScript, Python, and SQL, including their main frameworks. Familiar with projects developed using agile methodologies, especially SCRUM, and has a solid understanding of MVC architecture and RESTful API development.<br /> Experienced in relational database management systems such as MySQL, PostgreSQL, and Oracle DB, with strong academic background in Data Science, utilizing Excel, Pandas, MongoDB, Spark, NumPy, Matplotlib, and other technologies. Fluent and certified in English and French, currently pursuing a degree in Data Science at the Federal Technological University of Paraná (UTFPR), deepening his interest in the field"
+        "Graduated in Systems Analysis and Development from the Federal University of Paraná (UFPR), with advanced knowledge primarily in JavaScript, Python, and SQL, including their main frameworks. "
+        + "Experienced in projects developed using agile methodologies, especially SCRUM, and has a solid understanding of MVC architecture and RESTful API development. "
+        + "Proficient in relational database management systems such as MySQL, PostgreSQL, and Oracle DB, with strong academic experience in Data Science, utilizing Excel, Pandas, MongoDB, Spark, NumPy, Matplotlib, and other technologies. "
+        + "Fluent and certified in English and French, currently pursuing a degree in Data Science at the Federal Technological University of Paraná (UTFPR), expanding his knowledge and interest in the field."
     }
   };
 
