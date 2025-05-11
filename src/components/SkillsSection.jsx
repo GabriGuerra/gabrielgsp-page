@@ -19,18 +19,22 @@ import { DiSpark } from "react-icons/di";
 
 export default function SkillsSection() {
   const technologies = [
-    { icon: IoLogoJavascript, color: "text-yellow-500", name: "JavaScript" },
-    { icon: FaReact, color: "text-cyan-400", name: "React" },
-    { icon: FaJava, color: "text-red-600", name: "Java" },
-    { icon: FaCode, color: "text-blue-500", name: "C#" },
-    { icon: SiDotnet, color: "text-purple-600", name: ".NET" },
-    { icon: FaDocker, color: "text-blue-400", name: "Docker" },
-    { icon: FaBootstrap, color: "text-indigo-600", name: "Bootstrap" },
-    { icon: SiTailwindcss, color: "text-teal-500", name: "Tailwind" },
-    { icon: SiMysql, color: "text-blue-500", name: "MySQL" },
-    { icon: SiPostgresql, color: "text-blue-400", name: "PostgreSQL" },
-    { icon: SiOracle, color: "text-red-600", name: "Oracle DB" },
-    { icon: DiSpark, color: "text-orange-500", name: "Spark" },
+  
+{ icon: IoLogoJavascript, color: "text-yellow-500", name: "JavaScript" },
+{ icon: FaReact, color: "text-cyan-400", name: "React" },
+{ icon: FaBootstrap, color: "text-indigo-600", name: "Bootstrap" },
+{ icon: SiTailwindcss, color: "text-teal-500", name: "Tailwind" },
+{ icon: FaDocker, color: "text-blue-400", name: "Docker" },
+{ icon: SiPython, color: "text-blue-300", name: "Python" },
+{ icon: DiSpark, color: "text-orange-500", name: "Spark" },
+{ icon: SiMongodb, color: "text-green-500", name: "MongoDB" },
+{ icon: SiNumpy, color: "text-orange-400", name: "NumPy" },
+{ icon: SiPandas, color: "text-red-500", name: "Pandas" },
+{ icon: SiMatplotlib, color: "text-blue-700", name: "Matplotlib" },
+{ icon: SiMicrosoftexcel, color: "text-green-400", name: "Excel" },
+{ icon: SiMysql, color: "text-blue-500", name: "MySQL" },
+{ icon: SiPostgresql, color: "text-blue-400", name: "PostgreSQL" },
+{ icon: SiOracle, color: "text-red-600", name: "Oracle DB" },
   ];
 
   return (
